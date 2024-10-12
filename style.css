@@ -1,0 +1,171 @@
+/* GLOBAL */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  padding: 32px 80px;
+  background: url(./public/background.jpg);
+  background-position: center left;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: scroll;
+}
+
+p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #f5f4f4;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  border: none;
+}
+
+input::placeholder {
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  width: 1120px;
+  margin: 0 auto;
+  backdrop-filter: blur(50px);
+  border-radius: 8px;
+}
+
+/* HEADER */
+
+.header {
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__input {
+  width: 506px;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: rgba(245, 244, 244, 0.4);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #707070;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper::after {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  content: '';
+  background: url(./public/magnifier.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+}
+
+/* MAIN */
+
+.main {
+  padding: 32px;
+}
+
+.main__wrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.info {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.place {
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.place__location {
+  font-weight: 700;
+}
+
+.temp {
+  font-weight: 700;
+  font-size: 112px;
+  line-height: 112px;
+  color: #fff;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.weather-info {
+  color: #f5f4f4;
+}
+
+.weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.weather__image {
+  width: 24px;
+  height: 24px;
+}
+
+.details__list {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+}
+
+.details__item {
+  width: 158px;
+  height: 196px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: rgba(245, 244, 244, 0.4);
+}
+
+.slider {
+  height: 192px;
+}
+
+/* FOOTER */
+
+.footer {
+  height: 84px;
+}

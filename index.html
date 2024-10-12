@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img
+          class="header__logo"
+          src="./public/logo.svg"
+          alt="Логотип с надписью WeatherApp"
+        />
+        <span class="input-wrapper">
+          <input
+            class="header__input"
+            type="text"
+            name="city-input"
+            placeholder="Поиск по городу"
+            id="city-input"
+          />
+        </span>
+      </header>
+
+      <main class="main">
+        <div class="main__wrapper">
+          <div class="info">
+            <div class="place">
+              <p class="place__location">Москва</p>
+              <p class="place__date">Суббота, 06 января</p>
+              <p class="place__time">11:29</p>
+            </div>
+            <p class="temp">-7°</p>
+            <div class="weather-info">
+              <div class="weather">
+                <img
+                  src="public/cloudy-icon.png"
+                  alt="Иконка с облаками"
+                  class="weather__image"
+                />
+                <p class="weather__title">Облачно</p>
+              </div>
+              <p class="weather-info__feel-temp">Ощущается как -11°</p>
+            </div>
+          </div>
+          <div class="details">
+            <ul class="details__list">
+              <li class="details__item"></li>
+              <li class="details__item"></li>
+              <li class="details__item"></li>
+              <li class="details__item"></li>
+              <li class="details__item"></li>
+              <li class="details__item"></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="slider"></div>
+      </main>
+
+      <footer class="footer"></footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
