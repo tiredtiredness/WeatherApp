@@ -1,75 +1,131 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Weather App</title>
-  </head>
-  <body>
-    <div class="container">
-      <header class="header">
-        <img
-          class="header__logo"
-          src="./public/logo.svg"
-          alt="Логотип с надписью WeatherApp"
-        />
-        <span class="input-wrapper">
-          <input
-            class="header__input"
-            type="text"
-            name="city-input"
-            placeholder="Поиск по городу"
-            id="city-input"
-          />
-        </span>
-      </header>
 
-      <main class="main">
-        <div class="main__wrapper">
-          <div class="info">
-            <div class="place">
-              <p class="place__location">Москва</p>
-              <p class="place__date">Суббота, 06 января</p>
-              <p class="place__time">11:29</p>
-            </div>
-            <p class="temp">-7°</p>
-            <div class="weather-info">
-              <div class="weather">
-                <img
-                  src="public/cloudy-icon.png"
-                  alt="Иконка с облаками"
-                  class="weather__image"
-                />
-                <p class="weather__title">Облачно</p>
-              </div>
-              <p class="weather-info__feel-temp">Ощущается как -11°</p>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <title>Weather App</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <img class="header__logo" src="./public/logo.svg" alt="Логотип с надписью WeatherApp" />
+      <form class="search-form" name="search-form" action="">
+        <input class="search-form__input" type="text" name="city-input" placeholder="Поиск по городу" id="city-input" />
+        <div id="city-input-icon" class="search-form__icon"></div>
+      </form>
+    </header>
+
+    <main class="main">
+      <div class="main__wrapper">
+        <div class="info">
+          <div class="place">
+            <p class="place__location">Москва</p>
+            <p class="place__date">Суббота, 06 января</p>
+            <p class="place__time">11:29</p>
           </div>
-          <div class="details">
-            <ul class="details__list">
-              <li class="details__item"></li>
-              <li class="details__item"></li>
-              <li class="details__item"></li>
-              <li class="details__item"></li>
-              <li class="details__item"></li>
-              <li class="details__item"></li>
-            </ul>
+          <p class="temp">-7°</p>
+          <div class="weather-info">
+            <div class="weather">
+              <img src="/assets/images/icons/cloudy-icon.png" alt="Иконка с облаками" class="weather__image" />
+              <p class="weather__title">Облачно</p>
+            </div>
+            <p class="weather-info__feel-temp">Ощущается как -11°</p>
           </div>
         </div>
+        <div class="details">
+          <ul class="details__list">
+            <li id="humidity" class="detail">
+              <header class="detail__header">
+                <h3 class="detail__title">Влажность</h3>
+                <img src="/assets/images/icons/humidity.svg" alt="" class="detail__image">
+                <p class="detail__value"></p>
+              </header>
+              <div class="detail__description">
+                <img src="/assets/images/bars/bar-75.svg" alt="" class="detail__bar">
+                <div class="detail__wrapper--spaced detail__wrapper">
+                  <p class="detail__description-value">0%</p>
+                  <p class="detail__description-value">100%</p>
+                </div>
+              </div>
+            </li>
+            <li id="pressure" class="detail">
+              <header class="detail__header">
+                <h3 class="detail__title">Давление</h3>
+                <img src="/assets/images/icons/pressure.svg" alt="" class="detail__image">
+                <p class="detail__value"></p>
+              </header>
+              <div class="detail__description">
+                <img src="/assets/images/bars/pressure-high.svg" alt="" class="detail__bar">
+                <div class="detail__wrapper detail__wrapper--centered">
+                  <p class="detail__description-value">Повышенное</p>
+                </div>
+              </div>
+            </li>
+            <li id="visibility" class="detail">
+              <header class="detail__header">
+                <h3 class="detail__title">Видимость</h3>
+                <img src="/assets/images/icons/visibility.svg" alt="" class="detail__image">
+                <p class="detail__value"></p>
+              </header>
+              <div class="detail__description">
+                <img src="/assets/images/bars/bar-25.svg" alt="" class="detail__bar">
+                <div class="detail__wrapper detail__wrapper--centered">
+                  <p class="detail__description-value"></p>
+                </div>
+              </div>
+            </li>
+            <li id="sunrise" class="detail">
+              <header class="detail__header">
+                <h3 class="detail__title">Рассвет</h3>
+                <img src="/assets/images/icons/sunrise.svg" alt="" class="detail__image">
+                <p class="detail__value"></p>
+              </header>
+              <div class="detail__description">
+                <div class="detail__wrapper detail__wrapper--centered">
+                  <p class="detail__description-value">Прошло </p>
+                </div>
+              </div>
+            </li>
+            <li id="sunset" class="detail">
+              <header class="detail__header">
 
-        <div class="slider"></div>
-      </main>
+                <h3 class="detail__title">Закат</h3>
+                <img src="/assets/images/icons/sunset.svg" alt="" class="detail__image">
+                <p class="detail__value"></p>
+              </header>
+              <div class="detail__description">
+                <div class="detail__wrapper detail__wrapper--centered">
+                  <p class="detail__description-value"></p>
+                </div>
+              </div>
+            </li>
+            <li id="wind" class="detail">
+              <header class="detail__header">
+                <h3 class="detail__title">Сила ветра</h3>
+                <img src="/assets/images/icons/paper-plane.svg" alt="" class="detail__image">
+                <p class="detail__value"> м/с</p>
+              </header>
+              <div class="detail__description">
+                <div class="detail__wrapper detail__wrapper--centered">
+                  <p class="detail__description-value"></p>
+                </div>
+              </div>
+            </li>
 
-      <footer class="footer"></footer>
-    </div>
+          </ul>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
-  </body>
+      <div class="slider"></div>
+    </main>
+
+    <footer class="footer"></footer>
+  </div>
+
+  <script type="module" src="/assets/js/script.js"></script>
+</body>
+
 </html>
