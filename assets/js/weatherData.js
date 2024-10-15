@@ -1,5 +1,5 @@
 const weatherData = {
-  humidity: { value: '75' },
+  humidity: { value: '75', description: [0, 100] },
   pressure: { value: '761', description: 'Повышенное' },
   visibility: { value: '28', description: 'Нормальная' },
   sunrise: { value: '8:42', description: '02:47' },

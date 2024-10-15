@@ -35,7 +35,7 @@
   font-weight: 700;
   font-size: 112px;
   line-height: 112px;
-  color: #fff;
+  color: white;
 }
 
 .weather-info {
@@ -45,7 +45,7 @@
 }
 
 .weather-info {
-  color: #f5f4f4;
+  color: var(--color-light);
 }
 
 .weather {
