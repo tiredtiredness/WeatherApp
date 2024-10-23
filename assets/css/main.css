@@ -1,8 +1,8 @@
 .main {
-  padding: 32px;
 }
 
 .main__wrapper {
+  padding: 32px;
   display: flex;
   gap: 16px;
 }
@@ -29,6 +29,12 @@
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
+}
+
+.place__time {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .temp {
@@ -58,8 +64,4 @@
 .weather__image {
   width: 24px;
   height: 24px;
-}
-
-.slider {
-  height: 192px;
 }

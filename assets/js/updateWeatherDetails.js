@@ -26,7 +26,7 @@ export function updateWeatherDetails() {
     // значение
     const detailValueNode = detailHeaderNode.querySelector('.detail__value');
 
-    // описание 
+    // описание
     const detailDescriptionValueNode = detailDescriptionNode.querySelector(
       '.detail__description-value'
     );

@@ -24,7 +24,7 @@
           <div class="place">
             <p class="place__location">Москва</p>
             <p>Суббота, 06 января</p>
-            <p>11:29</p>
+            <time class="place__time">11:29</time>
           </div>
           <p class="temp">-7°</p>
           <div class="weather-info">
@@ -39,8 +39,8 @@
           <ul class="details__list">
             <li id="humidity" class="detail">
               <header class="detail__header">
-                <h3 class="detail__title">Влажность</h3>
-                <img src="assets/images/icons/humidity.svg" alt="" class="detail__image">
+                <h2 class="detail__title">Влажность</h2>
+                <img src="assets/images/icons/humidity.svg" alt="Капли воды" class="detail__image">
                 <p class="detail__value"></p>
               </header>
               <div class="detail__description">
@@ -54,7 +54,7 @@
             <li id="pressure" class="detail">
               <header class="detail__header">
                 <h3 class="detail__title">Давление</h3>
-                <img src="assets/images/icons/pressure.svg" alt="" class="detail__image">
+                <img src="assets/images/icons/pressure.svg" alt="Шкала барометра" class="detail__image">
                 <p class="detail__value"></p>
               </header>
               <div class="detail__description">
@@ -67,7 +67,7 @@
             <li id="visibility" class="detail">
               <header class="detail__header">
                 <h3 class="detail__title">Видимость</h3>
-                <img src="assets/images/icons/visibility.svg" alt="" class="detail__image">
+                <img src="assets/images/icons/visibility.svg" alt="Глаз" class="detail__image">
                 <p class="detail__value"></p>
               </header>
               <div class="detail__description">
@@ -80,12 +80,12 @@
             <li id="sunrise" class="detail">
               <header class="detail__header">
                 <h3 class="detail__title">Рассвет</h3>
-                <img src="assets/images/icons/sunrise.svg" alt="" class="detail__image">
-                <p class="detail__value"></p>
+                <img src="assets/images/icons/sunrise.svg" alt="Рисунок восходящего солнца" class="detail__image">
+                <time class="detail__value"></time>
               </header>
               <div class="detail__description">
                 <div class="detail__wrapper detail__wrapper--centered">
-                  <p class="detail__description-value">Прошло </p>
+                  <time class="detail__description-value"></time>
                 </div>
               </div>
             </li>
@@ -93,19 +93,19 @@
               <header class="detail__header">
 
                 <h3 class="detail__title">Закат</h3>
-                <img src="assets/images/icons/sunset.svg" alt="" class="detail__image">
-                <p class="detail__value"></p>
+                <img src="assets/images/icons/sunset.svg" alt="Рисунок заходящего солнца" class="detail__image">
+                <time class="detail__value"></time>
               </header>
               <div class="detail__description">
                 <div class="detail__wrapper detail__wrapper--centered">
-                  <p class="detail__description-value"></p>
+                  <time class="detail__description-value"></time>
                 </div>
               </div>
             </li>
             <li id="wind" class="detail">
               <header class="detail__header">
                 <h3 class="detail__title">Сила ветра</h3>
-                <img src="assets/images/icons/paper-plane.svg" alt="" class="detail__image">
+                <img src="assets/images/icons/paper-plane.svg" alt="Бумажный самолетик" class="detail__image">
                 <p class="detail__value"> м/с</p>
               </header>
               <div class="detail__description">
@@ -119,10 +119,28 @@
         </div>
       </div>
 
-      <div class="slider"></div>
+      <section class="slider">
+        <div class="slider__menu">
+          <h2 class="slider__title">Прогноз:</h2>
+          <p class="slider__menu-item is-active">на 24 часа</p>
+          <p class="slider__menu-item">на 5 дней</p>
+        </div>
+        <div class="switch">
+          <button class="switch__arrow " disabled><img src="assets/images/icons/arrow.svg" alt="Иконка пролистывания влево"></button>
+          <div class="switch__wrapper">
+            <div class="day-hour-weather">
+            </div>
+          </div>
+          <button class="switch__arrow switch__arrow--right "><img src="assets/images/icons/arrow.svg" alt="Иконка пролистывания вправо"></button>
+        </div>
+      </section>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <p class="footer__description">Проект выполнен в рамках стажировки <a href="https://preax.ru"
+          target="_blank">PREAX</a>
+      </p>
+    </footer>
   </div>
 
   <script type="module" src="assets/js/script.js"></script>
