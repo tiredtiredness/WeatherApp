@@ -1,11 +1,34 @@
-const weatherData = {
-  humidity: { value: '75', description: [0, 100] },
-  pressure: { value: '761', description: 'Повышенное' },
-  visibility: { value: '28', description: 'Нормальная' },
-  sunrise: { value: '8:42', description: '02:47' },
-  sunset: { value: '16:37', description: '05:08' },
-  wind: { value: '2', description: 'Северо-западный' },
-};
+const weatherData = [
+  {
+    param: 'humidity',
+    name: 'Влажность',
+    value: 75,
+    maxValue: 100,
+    description: [0, 100],
+  },
+  {
+    param: 'pressure',
+    name: 'Давление',
+    value: 761,
+    maxValue: 970,
+    description: 'Повышенное',
+  },
+  {
+    param: 'visibility',
+    name: 'Видимость',
+    value: 28,
+    maxValue: 120,
+    description: 'Нормальная',
+  },
+  { param: 'sunrise', name: 'Рассвет', value: '8:42', description: '02:47' },
+  { param: 'sunset', name: 'Закат', value: '16:37', description: '05:08' },
+  {
+    param: 'wind',
+    name: 'Сила ветра',
+    value: 2,
+    description: 'Северо-западный',
+  },
+];
 
 const oneDayForecast = [
   { time: '12:00', weather: 'broken-clouds', temperature: -7 },

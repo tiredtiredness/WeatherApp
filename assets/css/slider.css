@@ -103,6 +103,7 @@
 }
 
 .day-hour-weather {
+  overflow-x: hidden;
   padding-right: 88px;
   display: flex;
   align-items: center;

@@ -4,6 +4,7 @@
 @import url(./main.css);
 @import url(./details.css);
 @import url(./slider.css);
+@import url(./normalize.css);
 
 /* GLOBAL */
 
@@ -25,15 +26,14 @@
 }
 
 body {
+  padding: 32px 80px;
   font-family: 'Raleway', sans-serif;
   font-variant-numeric: lining-nums;
-  padding: 32px 80px;
   background: url(/assets/images/background.jpg);
   background-position: center left;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: scroll;
 }
 
 p {

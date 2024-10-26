@@ -1,87 +1,97 @@
 import { weatherData } from './weatherData.js';
 
-function calcPercentageBarImage(value, maxValue) {
-  const imagePath = '/assets/images/bars/bar-';
-  const percent = Math.round((value * 100) / maxValue);
+const getDetailValue = (param, value) => {
+  switch (param) {
+    case 'humidity':
+      return `${value} %`;
+    case 'pressure':
+      return `${value}`;
+    case 'visibility':
+      return `${value} км`;
+    case 'sunrise':
+      return `${value}`;
+    case 'sunset':
+      return `${value}`;
+    case 'wind':
+      return `${value} м/с`;
+  }
+};
 
-  if (percent > 75) return `${imagePath}100.svg`;
-  else if (percent > 50) return `${imagePath}75.svg`;
-  else if (percent > 25) return `${imagePath}50.svg`;
-  else if (percent > 0) return `${imagePath}25.svg`;
-  else return `${imagePath}0.svg`;
+function getInput(value, maxValue, gradient = false) {
+  return `
+  <input type="range" name="" id="" disabled class="${
+    gradient ? 'details__range--gradient' : ''
+  } details__range" value="${(value / maxValue) * 100}">
+  `;
 }
 
-function calcPressureBarImage(value) {
-  const imagePath = 'assets/images/bars/pressure-';
-  if (value === 760) return `${imagePath}normal.svg`;
-  if (value > 760) return `${imagePath}high.svg`;
-  if (value < 760) return `${imagePath}low.svg`;
+function getDetailDescription(param, value, maxValue = 0, description) {
+  switch (param) {
+    case 'humidity':
+      return `${getInput(value, maxValue)}
+      <div class="detail__wrapper--spaced detail__wrapper">
+        <p class="detail__description-value">0%</p>
+        <p class="detail__description-value">100%</p>
+      </div>`;
+    case 'pressure':
+      return `${getInput(value, maxValue, true)}
+      <div class="detail__wrapper--centered detail__wrapper">
+        <p class="detail__description-value">${description}</p>
+      </div>`;
+    case 'visibility':
+      return `${getInput(value, maxValue)}
+      <div class="detail__wrapper--centered detail__wrapper">
+        <p class="detail__description-value">${description}</p>
+      </div>`;
+    case 'sunrise':
+      return `
+        <div class="detail__wrapper detail__wrapper--centered">
+          <time class="detail__description-value">Прошло: ${description}</time>
+        </div>
+      `;
+    case 'sunset':
+      return `
+        <div class="detail__wrapper detail__wrapper--centered">
+          <time class="detail__description-value">Осталось: ${description}</time>
+        </div>
+      `;
+    case 'wind':
+      return `
+        <div class="detail__wrapper detail__wrapper--centered">
+          <time class="detail__description-value">${description}</time>
+        </div>
+      `;
+  }
 }
 
 export function updateWeatherDetails() {
-  for (const param in weatherData) {
-    const detailNode = document.getElementById(param).children;
-    const [detailHeaderNode, detailDescriptionNode] = detailNode;
+  const detailsListNode = document.querySelector('.details__list');
 
-    // значение
-    const detailValueNode = detailHeaderNode.querySelector('.detail__value');
-
-    // описание
-    const detailDescriptionValueNode = detailDescriptionNode.querySelector(
-      '.detail__description-value'
+  for (const item of weatherData) {
+    detailsListNode.insertAdjacentHTML(
+      'beforeend',
+      `
+      <li id="${item.param}" class="detail">
+              <header class="detail__header">
+                <h2 class="detail__title">${item.name}</h2>
+                <img src="assets/images/icons/${
+                  item.param
+                }.svg" alt="Иконка параметра ${item.name.toLowerCase()}" class="detail__image">
+                <p class="detail__value">${getDetailValue(
+                  item.param,
+                  item.value
+                )}</p>
+              </header>
+              <div class="detail__description">
+                ${getDetailDescription(
+                  item.param,
+                  item.value,
+                  item.maxValue,
+                  item.description
+                )}
+              </div>
+            </li>
+      `
     );
-    const description = weatherData[param].description;
-    // шкала
-    const detailDescriptionBarNode =
-      detailDescriptionNode.querySelector('.detail__bar');
-
-    // значение параметра
-    switch (param) {
-      case 'humidity':
-        detailValueNode.textContent = `${weatherData[param].value} %`;
-        break;
-      case 'visibility':
-        detailValueNode.textContent = `${weatherData[param].value} км`;
-        break;
-      case 'wind':
-        detailValueNode.textContent = `${weatherData[param].value} м/с`;
-        break;
-      default:
-        detailValueNode.textContent = weatherData[param].value;
-        break;
-    }
-
-    // описание параметра
-    if (description) {
-      switch (param) {
-        case 'humidity':
-          detailDescriptionBarNode.src = calcPercentageBarImage(
-            weatherData[param].value,
-            100
-          );
-          break;
-        case 'pressure':
-          detailDescriptionBarNode.src = calcPressureBarImage(
-            weatherData[param].value
-          );
-          break;
-        case 'visibility':
-          detailDescriptionBarNode.src = calcPercentageBarImage(
-            weatherData[param].value,
-            110
-          );
-          detailDescriptionValueNode.textContent = description;
-          break;
-        case 'sunrise':
-          detailDescriptionValueNode.textContent = `Прошло: ${description}`;
-          break;
-        case 'sunset':
-          detailDescriptionValueNode.textContent = `Осталось: ${description}`;
-          break;
-        default:
-          detailDescriptionValueNode.textContent = description;
-          break;
-      }
-    }
   }
 }
