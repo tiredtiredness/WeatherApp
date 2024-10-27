@@ -12,20 +12,20 @@ function setForecast() {
     oneDayForecast.forEach(item =>
       weatherNode.insertAdjacentHTML(
         'beforeend',
-        `<div class="day-hour-weather__item"><time>${item.time}</time>
+        `<li class="day-hour-weather__item"><time>${item.time}</time>
           <img src="${iconPath}${item.weather}.svg">
           <p>${item.temperature}°</p>
-          </div>`
+          </li>`
       )
     );
   } else if (forecastType === 'на 5 дней') {
     fiveDaysForecast.forEach(item =>
       weatherNode.insertAdjacentHTML(
         'beforeend',
-        `<div class="day-hour-weather__item"><p>${item.date}</p>
+        `<li class="day-hour-weather__item"><p>${item.date}</p>
             <img src="${iconPath}${item.weather}.svg">
             <p>от ${item.temperature[0]}° до ${item.temperature[1]}°</p>
-            </div>`
+            </li>`
       )
     );
   }

@@ -5,6 +5,7 @@
 @import url(./details.css);
 @import url(./slider.css);
 @import url(./normalize.css);
+@import url(./queries.css);
 
 /* GLOBAL */
 
@@ -26,7 +27,6 @@
 }
 
 body {
-  padding: 32px 80px;
   font-family: 'Raleway', sans-serif;
   font-variant-numeric: lining-nums;
   background: url(/assets/images/background.jpg);
@@ -63,8 +63,8 @@ input::placeholder {
 }
 
 .container {
-  width: 1120px;
   margin: 0 auto;
+  max-width: 1120px;
   backdrop-filter: blur(50px);
   border-radius: 8px;
 }

@@ -1,16 +1,19 @@
-.main__wrapper {
+.main {
   padding: 32px;
+}
+.main__wrapper {
   display: flex;
   gap: 16px;
 }
 
 .info {
   padding: 8px;
+  max-width: 100%;
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  flex-grow: 1;
   text-align: center;
 }
 
@@ -34,7 +37,7 @@
   line-height: 24px;
 }
 
-.temp {
+.info__temp {
   font-weight: 700;
   font-size: 112px;
   line-height: 112px;

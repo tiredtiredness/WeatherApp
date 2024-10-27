@@ -1,4 +1,11 @@
+.details {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
 .details__list {
+  max-width: 506px;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -7,7 +14,7 @@
 }
 
 .detail {
-  width: 158px;
+  max-width: 158px;
   height: 196px;
   border-radius: 8px;
   padding: 16px;

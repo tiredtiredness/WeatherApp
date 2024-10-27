@@ -12,7 +12,7 @@
 
   <div class="container">
     <header class="header">
-      <img class="header__logo" src="public/logo.svg" alt="Логотип с надписью WeatherApp" />
+      <div class="header__logo"></div>
       <form class="search-form" name="search-form" action="">
         <input class="search-form__input" type="text" name="city-input" placeholder="Поиск по городу" id="city-input" />
         <div id="city-input-icon" class="search-form__icon"></div>
@@ -24,10 +24,10 @@
         <section class="info">
           <div class="place">
             <p class="place__location">Москва</p>
-            <p>Суббота, 06 января</p>
+            <p class="place__date">Суббота, 06 января</p>
             <time class="place__time">11:29</time>
           </div>
-          <p class="temp">-7°</p>
+          <p class="info__temp">-7°</p>
           <div class="weather-info">
             <div class="weather">
               <img src="assets/images/icons/cloudy-icon.png" alt="Иконка с облаками" class="weather__image" />
@@ -52,8 +52,8 @@
           <button class="switch__arrow " disabled><img src="assets/images/icons/arrow.svg"
               alt="Иконка пролистывания влево"></button>
           <div class="switch__wrapper">
-            <div class="day-hour-weather">
-            </div>
+            <ul class="day-hour-weather">
+            </ul>
           </div>
           <button class="switch__arrow switch__arrow--right "><img src="assets/images/icons/arrow.svg"
               alt="Иконка пролистывания вправо"></button>

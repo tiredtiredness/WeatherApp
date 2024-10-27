@@ -65,6 +65,8 @@
 
 .switch {
   display: flex;
+  gap: 32px;
+  max-width: 100%;
   justify-content: space-between;
   align-items: center;
 }
@@ -97,14 +99,16 @@
 }
 
 .switch__wrapper {
-  width: 880px;
-  mask-image: linear-gradient(to left, transparent, #000000 3.64%);
-  -webkit-mask-image: linear-gradient(to left, transparent, #000000 3.64%);
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-grow: 1;
+  /* mask-image: linear-gradient(to left, transparent, #000000 3.64%);
+  -webkit-mask-image: linear-gradient(to left, transparent, #000000 3.64%); */
 }
 
 .day-hour-weather {
-  overflow-x: hidden;
-  padding-right: 88px;
+  /* flex-shrink: 0; */
   display: flex;
   align-items: center;
   gap: 16px;

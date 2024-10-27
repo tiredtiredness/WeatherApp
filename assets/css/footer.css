@@ -1,5 +1,6 @@
 .footer {
   padding: 32px;
+  max-width: 100%;
 }
 
 .footer__description {

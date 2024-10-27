@@ -1,0 +1,408 @@
+@media (min-width: 375px) or (max-width: 375px) {
+  body {
+    margin: 16px;
+  }
+  .container {
+    margin: 16px;
+  }
+  .main__wrapper {
+    padding-bottom: 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .header,
+  .main,
+  .footer {
+    padding: 16px;
+    min-width: 343px;
+  }
+  .header {
+    gap: 16px;
+  }
+  .header__logo {
+    width: 32px;
+    height: 32px;
+    background-image: url(../../public/logo-short.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .search-form {
+    width: 100%;
+  }
+  .search-form__input {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 8px 12px;
+    min-width: 263px;
+    width: 100%;
+  }
+  .search-form__icon {
+    width: 16px;
+    height: 16px;
+    right: 8px;
+  }
+
+  .details {
+    min-width: 311px;
+  }
+  .details__list {
+    gap: 8px;
+  }
+  .detail {
+    max-width: 128px;
+    padding: 12px;
+    height: 148px;
+    gap: 12px;
+  }
+  .detail__title {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .detail__header {
+    gap: 12px;
+  }
+  .detail__image {
+    width: 24px;
+    height: 24px;
+  }
+  .detail__value {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  input[type='range'].details__range {
+    height: 6px;
+  }
+  .detail__description {
+    gap: 6px;
+  }
+  .detail__description-value {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .place {
+    gap: 4px;
+  }
+  .place__location {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .place__date,
+  .place__time {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .info {
+    padding: 0 8px;
+    gap: 16px;
+  }
+  .info__temp {
+    font-size: 56px;
+    line-height: 56px;
+  }
+  .weather-info {
+    gap: 4px;
+  }
+  .weather-info p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .weather__image {
+    width: 16px;
+    height: 16px;
+  }
+  .slider {
+    padding: 0;
+    padding-top: 16px;
+    gap: 16px;
+  }
+  .slider__menu {
+    height: 22px;
+    gap: 16px;
+  }
+  .slider__title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .slider__menu-item {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .is-active::after {
+    height: 1px;
+  }
+  .switch {
+    gap: 16px;
+  }
+  .switch__wrapper {
+    mask-image: linear-gradient(to left, transparent, #000000 8.04%);
+    -webkit-mask-image: linear-gradient(to left, transparent, #000000 8.04%);
+  }
+  .switch__arrow {
+    padding: 8px 12px;
+  }
+  .switch__arrow img {
+    width: 16px;
+    height: 16px;
+  }
+  .day-hour-weather {
+    gap: 8px;
+  }
+  .day-hour-weather__item {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+  .day-hour-weather time,
+  .day-hour-weather p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .day-hour-weather img {
+    width: 24px;
+    height: 24px;
+  }
+  .footer__description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    margin: 16px;
+  }
+  .header {
+    gap: 135px;
+  }
+  .detail {
+    max-width: 128px;
+  }
+  .switch {
+    max-width: 100%;
+  }
+  .day-hour-weather__item {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    margin: 24px;
+  }
+  .container {
+    margin: 24px;
+  }
+  .header,
+  .main,
+  .footer {
+    padding: 24px;
+  }
+  .header__logo {
+    width: 54px;
+    height: 48px;
+  }
+  .search-form__input {
+    padding: 12px 16px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .search-form__icon {
+    width: 24px;
+    height: 24px;
+    right: 16px;
+  }
+  .place__location {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .place__date,
+  .place__time {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .info__temp {
+    font-size: 112px;
+    line-height: 112px;
+  }
+  .weather {
+    gap: 6px;
+  }
+  .weather__image {
+    width: 24px;
+    height: 24px;
+  }
+  .weather-info p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .details__list {
+    gap: 12px;
+  }
+  .detail {
+    padding: 16px;
+    min-width: 163px;
+    height: 196px;
+    gap: 16px;
+  }
+  .detail__header {
+    gap: 16px;
+  }
+  .detail__title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .detail__image {
+    width: 32px;
+    height: 32px;
+  }
+  .detail__value {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .detail__description {
+    gap: 8px;
+  }
+  input[type='range'].details__range {
+    height: 8px;
+  }
+  .detail__description-value {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .slider {
+    padding-top: 24px;
+    gap: 24px;
+  }
+  .slider__menu {
+    height: 24px;
+  }
+  .is-active::after {
+    height: 2px;
+    bottom: -2px;
+  }
+  .slider__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .slider__menu-item {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .switch {
+    gap: 24px;
+  }
+  .switch__wrapper {
+    mask-image: linear-gradient(to left, transparent 0%, #000000 4.69%);
+    -webkit-mask-image: linear-gradient(to left, transparent 0%, #000000 4.69%);
+  }
+  .switch__arrow {
+    padding: 12px 16px;
+  }
+  .switch__arrow img {
+    width: 24px;
+    height: 24px;
+  }
+  .day-hour-weather__item {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+  .day-hour-weather__item p,
+  .day-hour-weather__item time {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .day-hour-weather__item img {
+    width: 32px;
+    height: 32px;
+  }
+  .footer__description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 886px) {
+  .main__wrapper {
+    gap: 48px;
+  }
+  .header__logo {
+    width: 54px;
+  }
+  .day-hour-weather__item {
+    flex-direction: row;
+  }
+  .info {
+    gap: 24px;
+  }
+  .place {
+    gap: 6px;
+  }
+  .weather-info {
+    gap: 6px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    margin: 32px;
+  }
+  .container {
+    margin: 32px;
+  }
+  .header,
+  .main,
+  .footer {
+    padding: 32px;
+  }
+  .header__logo {
+    width: 192px;
+    height: 48px;
+    background-image: url(../../public/logo.svg);
+  }
+  .search-form {
+    width: 506px;
+  }
+  .main__wrapper {
+    flex-direction: row;
+    padding-bottom: 32px;
+  }
+  .info {
+    padding: 8px;
+    gap: 48px;
+  }
+  .place {
+    gap: 8px;
+  }
+  .weather-info {
+    gap: 8px;
+  }
+  .details__list {
+    gap: 16px;
+  }
+  .detail {
+    width: 158px;
+    min-width: 158px;
+  }
+  .switch {
+    gap: 32px;
+  }
+  .slider {
+    gap: 32px;
+    padding-top: 32px;
+  }
+  .slider__menu {
+    gap: 32px;
+  }
+  .day-hour-weather {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+    margin: 32px 80px;
+  }
+}
