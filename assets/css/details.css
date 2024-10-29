@@ -1,5 +1,4 @@
 .details {
-  flex-shrink: 0;
   display: flex;
   justify-content: center;
 }
